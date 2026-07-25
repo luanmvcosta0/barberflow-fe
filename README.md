@@ -1,75 +1,23 @@
-# React + TypeScript + Vite
+# BarberFlow Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de estudo fullstack simulando um sistema de agendamento de barbearia. Desenvolvido para praticar e aprofundar boas práticas de arquitetura, autenticação e integração com API no frontend com React e TypeScript.
 
-Currently, two official plugins are available:
+Este repositório contém o **frontend** do projeto. A API está em um repositório separado: [barberflow-be](https://github.com/luanmvcosta0/barberflow-be).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Objetivo
 
-## React Compiler
+Este não é um projeto comercial, é um ambiente de estudo focado em:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Proteção de rotas com **React Router** (rotas privadas e por perfil de usuário)
+- Consumo de API autenticada com **Axios** (interceptors, tratamento de token)
+- Estilização e componentização com **Material UI**
+- Gerenciamento de estado de autenticação com Context API
+- Boas práticas de organização de projeto React + TypeScript
 
-## Expanding the ESLint configuration
+## Status do projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚧 Em desenvolvimento: projeto de estudo, evoluindo em fases (ver roadmap no board/issues do repositório).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Licença
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Projeto livre para fins de estudo.
